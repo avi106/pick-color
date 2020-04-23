@@ -1,19 +1,26 @@
-//Properties / Selectors
-
-
-
-
+//Global Selection and variables
+const colorDivs = document.querySelectorAll(".color");
+const generateBtn = document.querySelector(".generate");
+const sliders = document.querySelectorAll('input[type="range"');
+const currentHex = document.querySelectorAll(".color h2");
+let initialColors;
 
 //Functions
 
 generateHex = () => {
-  const letters = '123456789ABCDEF'
-  let hash = '#'
-  for (let i=0; i < 6; i++) {
-    hash += letters[Math.floor(Math.random() * 16)];
-  }
-  return hash
-}
+  const hexColor = chroma.random();
+  return hexColor;
+};
 
-let randomHex = generateHex();
-console.log(randomHex);
+randomColors = () => {
+  colorDivs.forEach((div, index) => {
+    const HexText =  div.children[0];
+    const randomColor = generateHex();
+   
+    //Add the color to the background
+    div.style.backgroundColor = randomColor;
+    HexText.innerText = randomColor;
+  });
+};
+
+randomColors();
