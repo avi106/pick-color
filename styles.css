@@ -44,7 +44,7 @@ padding: 1rem;
 width: 80%;
 pointer-events: none;
 background: rgb(255, 255, 255);
-opacity: 1;
+opacity: 0;
 border-top-right-radius: 1rem;
 border-top-left-radius: 1rem;
 
