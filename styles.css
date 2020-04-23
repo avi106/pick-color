@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Muli", sans-serif;
+}
+
+i, svg {
+    pointer-events: none;
+}
+
+.colors {
+    min-height: 80vh;
+    display: flex;
+    color: rgb(212, 212, 212);
+    overflow: hidden;
+}
+
+.color {
+    min-height: 80vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.color h2 {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.sliders {
+display: flex;
+position: absolute;
+flex-direction: column;
+bottom: 0%;
+background: white;
+padding: 1rem;
+width: 80%;
+pointer-events: none;
+background: rgb(255, 255, 255);
+opacity: 1;
+border-top-right-radius: 1rem;
+border-top-left-radius: 1rem;
+
+/* We are adding an adjustment class */
+transform: translateY(100px);
+transition: all 0.5s ease-in-out;
+    
+}
+.sliders.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.sliders button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: none;
+    background: rgb(73, 73, 73);
+    color: white;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30vh;
+}
+
+.panel button {
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    background: rgb(31, 33, 63);
+    color: white;
+ 
+}
+
+.panel p {
+    font-size: 1.2rem;
+}
+
+.library-panel,
+.generate-panel,
+.save-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adjust, 
+.lock {
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    background: none;
+    margin: 2rem 0rem;
+}
